@@ -24,8 +24,8 @@ class CG_Client(WebSocketClient):
             bid = data['bids'][0]
             print('Bid:', bid)
         if data:
-            # self.closed(code=1000,reason='data received successful')
-            self.close_connection()
+            self.close(code=1000,reason='data received successful')
+            # self.close_connection()
 
 if __name__ == '__main__':
     ws = None
